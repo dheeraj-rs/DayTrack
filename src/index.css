@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.logobox {
+  -webkit-border-radius: 166px 83px 125px 67px;
+  -moz-border-radius: 166px 83px 125px 67px;
+  border-radius: 166px 83px 125px 67px;
+}
+.shadows {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=14, Direction=0, Color=#000000)";
+  -moz-box-shadow: 0 0 14px 5px #000000;
+  -webkit-box-shadow: 0 0 14px 5px #000000;
+  box-shadow: 0 0 14px 5px #000000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=14, Direction=135, Color=#000000);
+}
+
+.pinned {
+  color: gray;
+}
+
+@keyframes shuffle {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: -500px;
+  }
+  100% {
+    right: 0;
+  }
+}
+.animate-shuffle {
+  animation-name: shuffle;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+
+.dancing-div {
+  border: 2px solid #333;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.animate-dance {
+  animation: dance 0.8s infinite;
+}
